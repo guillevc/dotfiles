@@ -16,7 +16,11 @@ Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'scrooloose/nerdtree'
-Plugin 'tmux-plugins/vim-tmux'
+Plugin 'justinmk/vim-sneak'
+" Plugin 'kshenoy/vim-signature'
+" Plugin 'Yggdroot/indentLine'
+" Plugin 'nathanaelkane/vim-indent-guides'
+" Plugin 'tmux-plugins/vim-tmux'
 " Plugin 'scrooloose/nerdcommenter'
 " Plugin 'tpope/vim-commentary'
 " Plugin 'Xuyuanp/nerdtree-git-plugin'
@@ -24,6 +28,9 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
+
+let g:sneak#streak = 1
+"let g:indent_guides_guide_size = 2
 
 "
 " Vim config
@@ -72,7 +79,7 @@ let g:syntastic_enable_highlighting = 1 "default: 1
 let g:syntastic_auto_jump = 3 "default: 0
 let g:syntastic_enable_signs = 1
 let g:syntastic_error_symbol = "✗" "default: '>>'
-let g:syntastic_warning_symbol = "⚠" "default: '>>'
+let g:syntastic_warning_symbol = "△" "default: '>>' ⚠
 
 "
 " gruvbox
@@ -92,7 +99,7 @@ let g:airline#extensions#syntastic#enabled = 1
 "
 " YouCompleteMe
 "
-let g:ycm_register_as_syntastic_checker = 1 "default 1
+let g:ycm_register_as_syntastic_checker = 0 "default 1
 let g:ycm_show_diagnostics_ui = 0 "needed to let syntastic work propperly - default 1
 " will put icons in Vim's gutter on lines that have a diagnostic set.
 " Turning this off will also turn off the YcmErrorLine and YcmWarningLine
