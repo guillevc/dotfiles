@@ -20,7 +20,7 @@ Plugin 'justinmk/vim-sneak'
 " Plugin 'kshenoy/vim-signature'
 " Plugin 'Yggdroot/indentLine'
 " Plugin 'nathanaelkane/vim-indent-guides'
-" Plugin 'tmux-plugins/vim-tmux'
+Plugin 'tmux-plugins/vim-tmux'
 " Plugin 'scrooloose/nerdcommenter'
 " Plugin 'tpope/vim-commentary'
 " Plugin 'Xuyuanp/nerdtree-git-plugin'
@@ -38,6 +38,17 @@ let g:sneak#streak = 1
 syntax enable " enable OR on ?
 set nu
 set encoding=utf-8
+set title " set terminal title
+set cmdheight=1
+set scrolloff=3 " default is 0
+set autoread " detect when a file is changed
+
+" toggle invisible characters
+" set invlist
+set listchars=tab:▸\ ,eol:¬,trail:⋅,extends:❯,precedes:❮
+" highlight SpecialKey ctermbg=none
+set showbreak=↪
+"nmap <leader>l :set list!<cr>
 
 " indentation
 set autoindent
@@ -47,15 +58,32 @@ set shiftwidth=4 " when indenting with > use 4 spaces width
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
 
 set virtualedit=onemore
-set directory=tmp,/tmp
-set scrolloff=0 " default is 0
+
+" set directory=tmp,/tmp
+set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+
+" error bells
+set noerrorbells
+set visualbell
+set t_vb=
+set tm=500
+
+set wrap "turn on line wrapping
+set wrapmargin=8 " wrap lines when coming within n characters from side
+set linebreak " set soft wrapping
+set showbreak=… " show ellipsis at breaking
+
 set splitbelow
 set splitright
 set fillchars=vert:│
 set hlsearch " use :noh to disable current highlight
 set fileformat=unix
-"set showmatch
 "set clipboard=unnamed
+
+
+set mat=2 " how many tenths of a second to blink
+set showmatch
 
 let g:filetype_pl="prolog" " prolog syntax on pl files
 let python_highlight_all=1
@@ -121,8 +149,12 @@ map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 "
 let g:ctrlp_map = '<C-p>'
 let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_show_hidden=1
+let g:ctrlp_working_path_mode = 'ra'
 
 "
 " nerdtree
 "
 map <C-n> :NERDTreeToggle<CR>
+let NERDTreeShowHidden = 1
+let g:NERDTreeQuitOnOpen=0
