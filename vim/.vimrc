@@ -24,6 +24,9 @@ Plugin 'tmux-plugins/vim-tmux'
 " Plugin 'scrooloose/nerdcommenter'
 " Plugin 'tpope/vim-commentary'
 " Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'elzr/vim-json'
+Plugin 'othree/yajs.vim'
+Plugin 'pangloss/vim-javascript'
 call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
@@ -56,6 +59,7 @@ set expandtab " inserts spaces instead of tabs
 set tabstop=4
 set shiftwidth=4 " when indenting with > use 4 spaces width
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
+autocmd FileType json setlocal shiftwidth=2 tabstop=2
 
 set virtualedit=onemore
 
