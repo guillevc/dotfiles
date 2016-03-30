@@ -116,6 +116,22 @@ if ! shopt -oq posix; then
     fi
 fi
 
-#export NVM_DIR="/home/guille/.nvm"
-#[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi
 
+if [ -d "$HOME/jdk1.8.0_65/bin" ] ; then
+    PATH="$HOME/jdk1.8.0_65/bin:$PATH"
+fi
+
+if [ -d "/usr/games" ] ; then
+    PATH="/usr/games:$PATH"
+fi
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads NVM_DIR
+
+if [ -d "$HOME/opt/mongodb/bin" ] ; then
+    PATH="$PATH:$HOME/opt/mongodb/bin"
+fi

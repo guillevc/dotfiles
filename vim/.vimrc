@@ -27,6 +27,7 @@ Plugin 'tmux-plugins/vim-tmux'
 Plugin 'elzr/vim-json'
 Plugin 'othree/yajs.vim'
 Plugin 'pangloss/vim-javascript'
+" doesnt come with node support Plugin 'othree/javascript-libraries-syntax.vim'
 call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
@@ -34,6 +35,7 @@ filetype plugin indent on    " required
 
 let g:sneak#streak = 1
 "let g:indent_guides_guide_size = 2
+let g:syntastic_javascript_checkers = ['jshint']
 
 "
 " Vim config
@@ -112,6 +114,8 @@ let g:syntastic_auto_jump = 3 "default: 0
 let g:syntastic_enable_signs = 1
 let g:syntastic_error_symbol = "✗" "default: '>>'
 let g:syntastic_warning_symbol = "△" "default: '>>' ⚠
+
+let g:syntastic_loc_list_height = 5
 
 "
 " gruvbox
