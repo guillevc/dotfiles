@@ -36,6 +36,7 @@ filetype plugin indent on    " required
 let g:sneak#streak = 1
 "let g:indent_guides_guide_size = 2
 let g:syntastic_javascript_checkers = ['jshint']
+nnoremap <buffer> <F10> :exec '!python' shellescape(@%, 1)<cr>
 
 "
 " Vim config
