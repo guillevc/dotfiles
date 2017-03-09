@@ -1,0 +1,8 @@
+[user]
+    email = guillevc@git.hub
+    name = Guillermo
+
+[include]
+    path = ./.gitaliases
+[core]
+    editor = vim
