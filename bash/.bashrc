@@ -57,7 +57,8 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\] \[\033[01;34m\]\w\[\033[00m\]\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u \[\033[01;34m\]\w\[\033[00m\]\$ '
+    #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\] \[\033[01;34m\]\w\[\033[00m\]\$ '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
@@ -162,10 +163,10 @@ parse_git_branch() {
 # bash-git-prompt
 GIT_PROMPT_ONLY_IN_REPO=1
 
-# GIT_PROMPT_FETCH_REMOTE_STATUS=0   # uncomment to avoid fetching remote status
+GIT_PROMPT_FETCH_REMOTE_STATUS=0   # uncomment to avoid fetching remote status
 
 # GIT_PROMPT_SHOW_UPSTREAM=1 # uncomment to show upstream tracking branch
-# GIT_PROMPT_SHOW_UNTRACKED_FILES=all # can be no, normal or all; determines counting of untracked files
+GIT_PROMPT_SHOW_UNTRACKED_FILES=normal # can be no, normal or all; determines counting of untracked files
 
 # GIT_PROMPT_SHOW_CHANGED_FILES_COUNT=0 # uncomment to avoid printing the number of changed files
 
@@ -175,7 +176,7 @@ GIT_PROMPT_ONLY_IN_REPO=1
 # GIT_PROMPT_END=...      # uncomment for custom prompt end sequence
 
 # as last entry source the gitprompt script
-GIT_PROMPT_THEME=Evermeet # use custom theme specified in file GIT_PROMPT_THEME_FILE (default
+GIT_PROMPT_THEME=Single_line_Ubuntu # use custom theme specified in file GIT_PROMPT_THEME_FILE (default
 # ~/.git-prompt-colors.sh)
 # GIT_PROMPT_THEME_FILE=~/.git-prompt-colors.sh
 # GIT_PROMPT_THEME=Solarized # use theme optimized for solarized color scheme
