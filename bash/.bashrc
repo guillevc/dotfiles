@@ -57,8 +57,8 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u \[\033[01;34m\]\w\[\033[00m\]\$ '
-    #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\] \[\033[01;34m\]\w\[\033[00m\]\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u\[\033[01;34m\]\w\[\033[00m\]\$ '
+    #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u:\w@\h\[\033[00m\] \[\033[01;34m\]\w\[\033[00m\]\$ '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
@@ -135,7 +135,7 @@ PATH=$MYSQL_HOME/bin:$PATH
 export CATALINA_OPTS=$MAVEN_OPTS
 
 #Eclipse
-PATH=/home/guille/opt/eclipse:$PATH
+#PATH=/home/guille/opt/eclipse:$PATH
 
 #jhbuild
 PATH=$PATH:~/.local/bin
@@ -145,20 +145,19 @@ export SDKMAN_DIR="/home/guille/.sdkman"
 [[ -s "/home/guille/.sdkman/bin/sdkman-init.sh" ]] && source "/home/guille/.sdkman/bin/sdkman-init.sh"
 
 # android platform-tools
-PATH=$PATH:~/opt/android-sdk/platform-toolshome
+#PATH=$PATH:~/opt/android-sdk/platform-toolshome
 
 # PropEr erlang module
-export ERL_LIBS=/home/guille/opt/proper
+#export ERL_LIBS=/home/guille/opt/proper
 
 # NVM
 export NVM_DIR="/home/guille/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
-# Git branch in prompt
-parse_git_branch() {
-    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
-}
-#export PS1="\u@\h \[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ "
+## git-completion.bash
+# https://github.com/git/git/blob/master/contrib/completion/git-completion.bash
+source ~/.git-completion.bash
+PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u \[\033[01;34m\]\w\[\033[00m\]\e[37m$(__git_ps1 " (%s)") \e[0m\$ '
 
 # bash-git-prompt
 GIT_PROMPT_ONLY_IN_REPO=1
@@ -180,4 +179,4 @@ GIT_PROMPT_THEME=Single_line_Ubuntu # use custom theme specified in file GIT_PRO
 # ~/.git-prompt-colors.sh)
 # GIT_PROMPT_THEME_FILE=~/.git-prompt-colors.sh
 # GIT_PROMPT_THEME=Solarized # use theme optimized for solarized color scheme
-source ~/.bash-git-prompt/gitprompt.sh
+#source ~/.bash-git-prompt/gitprompt.sh
