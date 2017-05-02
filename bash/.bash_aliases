@@ -1,3 +1,3 @@
 alias mongod="mongod --dbpath ~/opt/mongodb/data/db"
 alias py="python3"
-alias cdas="cd /home/guille/Dropbox/clase/as"
+alias hdmibrightness="xrandr --output HDMI1 --brightness"

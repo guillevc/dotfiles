@@ -157,15 +157,15 @@ export NVM_DIR="/home/guille/.nvm"
 ## git-completion.bash
 # https://github.com/git/git/blob/master/contrib/completion/git-completion.bash
 source ~/.git-completion.bash
-PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u \[\033[01;34m\]\w\[\033[00m\]\e[37m$(__git_ps1 " (%s)") \e[0m\$ '
+PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h \[\033[01;34m\]\w\[\033[00m\]\e[37m$(__git_ps1 " (%s)") \e[0m\$ '
 
 # bash-git-prompt
 GIT_PROMPT_ONLY_IN_REPO=1
 
-GIT_PROMPT_FETCH_REMOTE_STATUS=0   # uncomment to avoid fetching remote status
+#GIT_PROMPT_FETCH_REMOTE_STATUS=0   # uncomment to avoid fetching remote status
 
 # GIT_PROMPT_SHOW_UPSTREAM=1 # uncomment to show upstream tracking branch
-GIT_PROMPT_SHOW_UNTRACKED_FILES=normal # can be no, normal or all; determines counting of untracked files
+#GIT_PROMPT_SHOW_UNTRACKED_FILES=normal # can be no, normal or all; determines counting of untracked files
 
 # GIT_PROMPT_SHOW_CHANGED_FILES_COUNT=0 # uncomment to avoid printing the number of changed files
 
@@ -175,8 +175,10 @@ GIT_PROMPT_SHOW_UNTRACKED_FILES=normal # can be no, normal or all; determines co
 # GIT_PROMPT_END=...      # uncomment for custom prompt end sequence
 
 # as last entry source the gitprompt script
-GIT_PROMPT_THEME=Single_line_Ubuntu # use custom theme specified in file GIT_PROMPT_THEME_FILE (default
+#GIT_PROMPT_THEME=Single_line_Ubuntu # use custom theme specified in file GIT_PROMPT_THEME_FILE (default
 # ~/.git-prompt-colors.sh)
 # GIT_PROMPT_THEME_FILE=~/.git-prompt-colors.sh
 # GIT_PROMPT_THEME=Solarized # use theme optimized for solarized color scheme
 #source ~/.bash-git-prompt/gitprompt.sh
+
+export TRANSMISSION_WEB_HOME="$HOME/.combustion/combustion-release"

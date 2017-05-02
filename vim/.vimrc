@@ -28,6 +28,7 @@ Plugin 'elzr/vim-json'
 Plugin 'othree/yajs.vim'
 Plugin 'pangloss/vim-javascript'
 " Plugin 'vim-erlang/vim-erlang-omnicomplete'
+Plugin 'ryanoasis/vim-devicons'
 " doesnt come with node support Plugin 'othree/javascript-libraries-syntax.vim'
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -133,6 +134,9 @@ set laststatus=2
 set t_Co=256
 let g:airline_powerline_fonts=1
 let g:airline#extensions#syntastic#enabled = 1
+" let g:airline_left_sep = ''
+let g:airline_left_sep = ''
+let g:airline_right_sep = ''
 
 "
 " YouCompleteMe
