@@ -40,6 +40,8 @@ let g:sneak#streak = 1
 let g:syntastic_javascript_checkers = ['jshint']
 nnoremap <buffer> <F10> :exec '!python3' shellescape(@%, 1)<cr>
 
+au BufRead,BufNewFile *.pc  set filetype=esqlc
+
 "
 " Vim config
 "
