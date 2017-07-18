@@ -25,10 +25,10 @@ Plugin 'tmux-plugins/vim-tmux'
 " Plugin 'tpope/vim-commentary'
 " Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'elzr/vim-json'
-Plugin 'othree/yajs.vim'
 Plugin 'pangloss/vim-javascript'
 " Plugin 'vim-erlang/vim-erlang-omnicomplete'
 Plugin 'ryanoasis/vim-devicons'
+Plugin 'mxw/vim-jsx'
 " doesnt come with node support Plugin 'othree/javascript-libraries-syntax.vim'
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -41,6 +41,7 @@ let g:syntastic_javascript_checkers = ['jshint']
 nnoremap <buffer> <F10> :exec '!python3' shellescape(@%, 1)<cr>
 
 au BufRead,BufNewFile *.pc  set filetype=esqlc
+let g:jsx_ext_required = 0
 
 "
 " Vim config
@@ -179,3 +180,4 @@ let g:NERDTreeQuitOnOpen=0
 " erlang complete
 "set omnifunc=syntaxcomplete#Complete
 "let g:ycm_cache_omnifunc = 0
+

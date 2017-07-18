@@ -182,3 +182,6 @@ GIT_PROMPT_ONLY_IN_REPO=1
 #source ~/.bash-git-prompt/gitprompt.sh
 
 export TRANSMISSION_WEB_HOME="$HOME/.combustion/combustion-release"
+
+
+export ERL_LIBS=/home/guille/opt/proper
