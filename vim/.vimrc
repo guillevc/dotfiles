@@ -21,6 +21,7 @@ Plugin 'justinmk/vim-sneak'
 " Plugin 'Yggdroot/indentLine'
 " Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'tmux-plugins/vim-tmux'
+Plugin 'christoomey/vim-tmux-navigator'
 " Plugin 'scrooloose/nerdcommenter'
 " Plugin 'tpope/vim-commentary'
 " Plugin 'Xuyuanp/nerdtree-git-plugin'
@@ -68,6 +69,8 @@ set tabstop=4
 set shiftwidth=4 " when indenting with > use 4 spaces width
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
 autocmd FileType json setlocal shiftwidth=2 tabstop=2
+autocmd FileType scss setlocal shiftwidth=2 tabstop=2
+autocmd FileType sass setlocal shiftwidth=2 tabstop=2
 
 set virtualedit=onemore
 
@@ -181,3 +184,4 @@ let g:NERDTreeQuitOnOpen=0
 "set omnifunc=syntaxcomplete#Complete
 "let g:ycm_cache_omnifunc = 0
 
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
