@@ -157,10 +157,9 @@ export NVM_DIR="/home/guille/.nvm"
 ## git-completion.bash
 # https://github.com/git/git/blob/master/contrib/completion/git-completion.bash
 source ~/.git-completion.bash
-PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h \[\033[01;34m\]\w\[\033[00m\]\e[37m$(__git_ps1 " (%s)") \e[0m\$ '
-
+PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]\[\033[01;34m\] \w\[\033[00m\]$(__git_ps1 " (%s)") \$ '
 # bash-git-prompt
-GIT_PROMPT_ONLY_IN_REPO=1
+#GIT_PROMPT_ONLY_IN_REPO=1
 
 #GIT_PROMPT_FETCH_REMOTE_STATUS=0   # uncomment to avoid fetching remote status
 

@@ -5,11 +5,13 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
+"Plugin 'flazz/vim-colorschemes'
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/syntastic'
 Plugin 'nvie/vim-flake8'
 Plugin 'vim-airline/vim-airline'
+"Plugin 'vim-airline/vim-airline-themes'
 Plugin 'morhetz/gruvbox'
 Plugin 'tpope/vim-fugitive'
 Plugin 'ntpeters/vim-better-whitespace'
@@ -20,8 +22,8 @@ Plugin 'justinmk/vim-sneak'
 " Plugin 'kshenoy/vim-signature'
 " Plugin 'Yggdroot/indentLine'
 " Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'tmux-plugins/vim-tmux'
-Plugin 'christoomey/vim-tmux-navigator'
+" Plugin 'tmux-plugins/vim-tmux'
+" Plugin 'christoomey/vim-tmux-navigator'
 " Plugin 'scrooloose/nerdcommenter'
 " Plugin 'tpope/vim-commentary'
 " Plugin 'Xuyuanp/nerdtree-git-plugin'
@@ -140,9 +142,10 @@ set laststatus=2
 set t_Co=256
 let g:airline_powerline_fonts=1
 let g:airline#extensions#syntastic#enabled = 1
-" let g:airline_left_sep = ''
-let g:airline_left_sep = ''
+let g:airline_left_sep = ''
+"let g:airline_left_sep = ''
 let g:airline_right_sep = ''
+
 
 "
 " YouCompleteMe
