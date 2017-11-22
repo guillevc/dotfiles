@@ -4,5 +4,6 @@
 
 [include]
     path = ./.gitaliases
+
 [core]
-    editor = vim
+    editor = vi
