@@ -1,9 +1,15 @@
 [user]
-    email = guillevc@git.hub
-    name = Guillermo
+        name = Guillermo Alfonso Varela Chouciño
+        email = guillermo@work.com
+
+# Aliases for "profiles"
+[alias]
+	pdv = config user.email \"guillermo@personal.com\"
+	pwork = config user.email \"guillermo@work.com\"
+	p = !git config user.name && git config user.email
 
 [include]
-    path = ./.gitaliases
+	path = ./.gitaliases
 
 [core]
-    editor = vi
+	editor = vi
