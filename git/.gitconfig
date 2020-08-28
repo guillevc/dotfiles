@@ -1,9 +1,8 @@
 [user]
-        name = Guillermo Alfonso Varela Chouciño
-        email = guillermo@work.com
-
-# Aliases for "profiles"
+	name = Guillermo Alfonso Varela Chouciño
+	email = guillermo@work.com
 [alias]
+	# Aliases for "profiles"
 	pdv = config user.email \"guillermo@personal.com\"
 	pwork = config user.email \"guillermo@work.com\"
 	p = !git config user.name && git config user.email
